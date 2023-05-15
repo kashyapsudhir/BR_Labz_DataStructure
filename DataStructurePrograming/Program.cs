@@ -7,7 +7,12 @@
         {
             Console.WriteLine("hello linked List Program");
 
-           
+            LinkedList list = new LinkedList();
+
+            list.AddFirst(56);
+            list.AddFirst(30);
+            list.AddFirst(70);
+            list.Print();
         }
       
     }
