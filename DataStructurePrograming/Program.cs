@@ -9,10 +9,16 @@
 
             LinkedList list = new LinkedList();
 
-            list.AddFirst(56);
-            list.AddFirst(30);
             list.AddFirst(70);
+            
+            list.AddFirst(30);
+            
+            list.AddFirst(56);
+
+
             list.Print();
+
+            //output 56,30,70
         }
       
     }

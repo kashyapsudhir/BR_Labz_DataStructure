@@ -10,50 +10,32 @@ namespace DataStructurePrograming
 {
     public class LinkedList
     {
-        internal DsNode head;
-        internal void AddFirst(int data)
+        public DsNode head;
+        public void AddFirst(int data)
         {
             DsNode newNode = new DsNode(data);
             if (this.head == null)
             {
                 this.head = newNode;
+                return; 
             }
-
-            else
-            {
-                DsNode temp = head;
-
-                while (temp.next != null)
-                {
-                    temp = temp.next;
-                }
-
-                temp.next = newNode;
-            }
-
-            Console.WriteLine("{0} Inserted into linked list", newNode.data);
+            newNode.next = this.head;
+            head = newNode;
+           
         }
-
-        internal void Print()
+        public void Print()
         {
-
-            DsNode temp = head;
-
-            if (temp == null)
+            DsNode currentNode = this.head;
+            while (currentNode != null)
             {
-
-                Console.WriteLine("Linkedlist is empty");
-                return;
+                Console.Write(currentNode.data + "-->");
+                currentNode = currentNode.next;
             }
-
-            while (temp != null)
-            {
-
-                Console.Write(temp.data + " ");
-
-                temp = temp.next;
-            }
+            
         }
+            
+               
 
+        
     }
 }

@@ -13,6 +13,7 @@ namespace DataStructurePrograming
         public DsNode(int data)
         {
             this.data = data;
+            this.next = null;
         }
     }
 }
