@@ -37,23 +37,31 @@ namespace DataStructurePrograming
             }
         }
 
-
-
-
-
-        public DsNode Search(int key)
+        public void InsertAfter(int key, int data)
         {
+            DsNode newNode = new DsNode(data);
+
             DsNode currentNode = head;
             while (currentNode != null)
             {
                 if (currentNode.data == key)
                 {
-                    return currentNode;
+                    newNode.next = currentNode.next;
+                    currentNode.next = newNode;
+                    if (currentNode == last)
+                    {
+                        last = newNode;
+                    }
+                    break;
                 }
                 currentNode = currentNode.next;
             }
-            return null;
         }
+
+
+
+
+
 
 
 

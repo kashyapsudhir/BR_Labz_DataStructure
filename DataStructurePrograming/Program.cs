@@ -5,7 +5,7 @@
     {
         public static void Main(string[] args) 
         {
-            Console.WriteLine("hello linkedList \n Search the element available or not in list ");
+            Console.WriteLine("hello linkedList \n Insert 40 after 30 56,30,40,70");
 
             LinkedList list = new LinkedList();
 
@@ -16,15 +16,9 @@
             list.AddFirst(70);
             list.Print();
 
-            DsNode result = list.Search(30);
-            if (result != null)
-            {
-                Console.WriteLine("node 30 is availabe.");
-            }
-            else
-            {
-                Console.WriteLine("node 30 is not availabe.");
-            }
+            Console.WriteLine("insert 40 after 30");
+
+            list.InsertAfter(30, 40);
 
             list.Print();
 
