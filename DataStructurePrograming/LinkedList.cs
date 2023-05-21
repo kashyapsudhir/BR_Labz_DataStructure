@@ -41,46 +41,20 @@ namespace DataStructurePrograming
 
 
 
-        //public void InsertAfter(int key, int data)
-        //{
-        //    DsNode newNode = new DsNode(data);
-
-        //    DsNode currentNode = head;
-        //    while (currentNode != null)
-        //    {
-        //        if (currentNode.data == key)
-        //        {
-        //            newNode.next = currentNode.next;
-        //            currentNode.next = newNode;
-        //            break;
-        //        }
-        //        currentNode = currentNode.next;
-        //    }
-        //}
-
-        public void deletelast()
+        public DsNode Search(int key)
         {
-            if (this.head == null)
+            DsNode currentNode = head;
+            while (currentNode != null)
             {
-                Console.WriteLine("the list is empty");
-
+                if (currentNode.data == key)
+                {
+                    return currentNode;
+                }
+                currentNode = currentNode.next;
             }
-            if (this.head.next == last)
-            {
-                this.head = null;
-                last = null;
-            }
-            DsNode SecondLast = this.head;
-            DsNode LastNode = head.next;
-            while (LastNode.next != null)
-            {
-                LastNode = LastNode.next;
-                SecondLast = SecondLast.next;
-
-            }
-
-            SecondLast.next = null;
+            return null;
         }
+
 
 
 
