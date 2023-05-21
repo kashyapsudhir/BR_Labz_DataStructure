@@ -17,15 +17,31 @@ namespace DataStructurePrograming
             if (this.head == null)
             {
                 this.head = newNode;
-                return; 
+                return;
             }
-            newNode.next = this.head;
-            head = newNode;
+            else
+            {
+                DsNode currentNode = this.head;
+                while(currentNode.next != null)
+                {
+                    currentNode = currentNode.next;
+                }
+                currentNode.next = newNode;
+
+                //newNode.next = this.head;
+                //head = newNode;
+                
+
+
+
+
+            }
            
         }
         public void Print()
         {
             DsNode currentNode = this.head;
+            
             while (currentNode != null)
             {
                 Console.Write(currentNode.data + "-->");
