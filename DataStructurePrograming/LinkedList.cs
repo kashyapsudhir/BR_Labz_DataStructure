@@ -37,27 +37,53 @@ namespace DataStructurePrograming
             }
         }
 
-        public void InsertAfter(int key, int data)
+        public void Delete(int key)
         {
-            DsNode newNode = new DsNode(data);
+            if (head == null)
+            {
+                Console.WriteLine("List is empty.");
+                return;
+            }
+
+            if (head.data == key)
+            {
+                head = head.next;
+                if (head == null)
+                {
+                    last = null;
+                }
+                return;
+            }
 
             DsNode currentNode = head;
-            while (currentNode != null)
+            while (currentNode.next != null)
             {
-                if (currentNode.data == key)
+                if (currentNode.next.data == key)
                 {
-                    newNode.next = currentNode.next;
-                    currentNode.next = newNode;
-                    if (currentNode == last)
+                    currentNode.next = currentNode.next.next;
+                    if (currentNode.next == null)
                     {
-                        last = newNode;
+                        last = currentNode;
                     }
-                    break;
+                    return;
                 }
                 currentNode = currentNode.next;
             }
+
+            Console.WriteLine($"value {key} not availale.");
         }
 
+        public int SizeOfList()
+        {
+            int count = 0;
+            DsNode currentNode = head;
+            while (currentNode != null)
+            {
+                count++;
+                currentNode = currentNode.next;
+            }
+            return count;
+        }
 
 
 
