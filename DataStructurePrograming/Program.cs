@@ -5,7 +5,7 @@
     {
         public static void Main(string[] args) 
         {
-            Console.WriteLine("hello linked List Program");
+            Console.WriteLine("hello linkedList \n Ability to insert 30 between 56 and 70");
 
             LinkedList list = new LinkedList();
 

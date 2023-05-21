@@ -21,23 +21,44 @@ namespace DataStructurePrograming
             }
             else
             {
-                DsNode currentNode = this.head;
-                while(currentNode.next != null)
-                {
-                    currentNode = currentNode.next;
-                }
-                currentNode.next = newNode;
+                //...Node with data 56 is First Created Next Append 30 to 56 Finally Append 70 to 30 LinkedList Sequence: 56->30->70
 
-                //newNode.next = this.head;
-                //head = newNode;
-                
+                //DsNode currentNode = this.head;
+                //while(currentNode.next != null)
+                //{
+                //    currentNode = currentNode.next;
+                //}
+                //currentNode.next = newNode;
+                //........................................
 
-
-
-
+                newNode.next = this.head;
+                this.head = newNode;
             }
-           
         }
+
+
+        //public void InsertAfter(int key, int data)
+        //{
+        //    DsNode newNode = new DsNode(data);
+
+        //    DsNode currentNode = head;
+        //    while (currentNode != null)
+        //    {
+        //        if (currentNode.data == key)
+        //        {
+        //            newNode.next = currentNode.next;
+        //            currentNode.next = newNode;
+        //            break;
+        //        }
+        //        currentNode = currentNode.next;
+        //    }
+        //}
+
+
+
+
+
+
         public void Print()
         {
             DsNode currentNode = this.head;
