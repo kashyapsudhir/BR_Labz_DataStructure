@@ -5,7 +5,7 @@
     {
         public static void Main(string[] args) 
         {
-            Console.WriteLine("hello linkedList \n Ability to delete the first element in the LinkedList of sequence 56->30->70");
+            Console.WriteLine("hello linkedList \n delete the last element in the LinkedList of sequence 56->30->70");
 
             LinkedList list = new LinkedList();
 
@@ -15,9 +15,9 @@
             //list.Print();
             list.AddFirst(30);
             list.Print();
-
-            list.Pop();
-            Console.WriteLine("....Delete first.....");
+            Console.WriteLine("delete last");
+            list.deletelast();
+            
             list.Print();
 
 

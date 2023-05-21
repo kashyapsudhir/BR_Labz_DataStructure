@@ -11,6 +11,7 @@ namespace DataStructurePrograming
     public class LinkedList
     {
         public DsNode head;
+        public DsNode last;
         public void AddFirst(int data)
         {
             DsNode newNode = new DsNode(data);
@@ -36,24 +37,11 @@ namespace DataStructurePrograming
             }
         }
 
-        public void Pop()
-        {
-            if (head == null)
-            {
-                Console.WriteLine("The linked list is empty.");
-            }
-            else
-            {
-                DsNode NewNodePop = head;
-                head = head.next;
-                NewNodePop.next = null;
-            }
-        }
 
 
 
 
-        //public void InsertAfter(int key,int data)
+        //public void InsertAfter(int key, int data)
         //{
         //    DsNode newNode = new DsNode(data);
 
@@ -70,6 +58,29 @@ namespace DataStructurePrograming
         //    }
         //}
 
+        public void deletelast()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("the list is empty");
+
+            }
+            if (this.head.next == last)
+            {
+                this.head = null;
+                last = null;
+            }
+            DsNode SecondLast = this.head;
+            DsNode LastNode = head.next;
+            while (LastNode.next != null)
+            {
+                LastNode = LastNode.next;
+                SecondLast = SecondLast.next;
+
+            }
+
+            SecondLast.next = null;
+        }
 
 
 
