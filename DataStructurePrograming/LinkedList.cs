@@ -23,21 +23,37 @@ namespace DataStructurePrograming
             {
                 //...Node with data 56 is First Created Next Append 30 to 56 Finally Append 70 to 30 LinkedList Sequence: 56->30->70
 
-                //DsNode currentNode = this.head;
-                //while(currentNode.next != null)
-                //{
-                //    currentNode = currentNode.next;
-                //}
-                //currentNode.next = newNode;
+                DsNode currentNode = this.head;
+                while (currentNode.next != null)
+                {
+                    currentNode = currentNode.next;
+                }
+                currentNode.next = newNode;
                 //........................................
 
-                newNode.next = this.head;
-                this.head = newNode;
+                //newNode.next = this.head;
+                //this.head = newNode;
+            }
+        }
+
+        public void Pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("The linked list is empty.");
+            }
+            else
+            {
+                DsNode NewNodePop = head;
+                head = head.next;
+                NewNodePop.next = null;
             }
         }
 
 
-        //public void InsertAfter(int key, int data)
+
+
+        //public void InsertAfter(int key,int data)
         //{
         //    DsNode newNode = new DsNode(data);
 
